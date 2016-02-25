@@ -64,7 +64,8 @@ export default {
 
   postcss: () => [
     require("stylelint")(),
-    require("postcss-import")(),
+    require("lost")(),
+    require("postcss-import")({ addDependencyTo: webpack }),
     require("postcss-url")(),
     require("postcss-cssnext")({ browsers: "last 2 versions" }),
     require("postcss-browser-reporter")(),

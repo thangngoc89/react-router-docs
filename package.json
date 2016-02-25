@@ -95,6 +95,7 @@
     "flexboxgrid": "^6.3.0",
     "lost": "^6.7.2",
     "postcss-import": "^8.0.2",
-    "postcss-url": "^5.1.1"
+    "postcss-url": "^5.1.1",
+    "react-sidebar": "^2.1.1"
   }
 }

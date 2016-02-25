@@ -1,9 +1,10 @@
 import React, { Component } from "react"
 import { PropTypes } from "react"
 import Helmet from "react-helmet"
+import Sidebar from "react-sidebar"
 
-import Header from "../Header"
 import Footer from "../Footer"
+import SidebarContent from "../SidebarContent"
 
 import styles from "./index.css"
 
@@ -17,25 +18,31 @@ export default class Layout extends Component {
     metadata: PropTypes.object.isRequired,
   };
 
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     const {
       pkg,
     } = this.context.metadata
 
     return (
-      <div className={ styles.layout }>
+      <Sidebar
+        sidebar={ <SidebarContent /> }
+        docked
+      >
         <Helmet
           meta={ [
             { property: "og:site_name", content: pkg.name },
             { name: "twitter:site", content: `@${ pkg.twitter }` },
           ] }
         />
-        <Header />
         <div className={ styles.content }>
           { this.props.children }
         </div>
         <Footer />
-      </div>
+      </Sidebar>
     )
   }
 }
