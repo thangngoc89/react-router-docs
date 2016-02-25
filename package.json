@@ -90,5 +90,10 @@
     "stylelint": "^4.0.0",
     "stylelint-config-standard": "^2.0.0",
     "statinamic": "^0.8.0"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.0",
+    "postcss-import": "^8.0.2",
+    "postcss-url": "^5.1.1"
   }
 }
