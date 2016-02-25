@@ -64,6 +64,8 @@ export default {
 
   postcss: () => [
     require("stylelint")(),
+    require("postcss-import")(),
+    require("postcss-url")(),
     require("postcss-cssnext")({ browsers: "last 2 versions" }),
     require("postcss-browser-reporter")(),
     require("postcss-reporter")(),
